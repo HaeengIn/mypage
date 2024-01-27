@@ -1,10 +1,16 @@
+.display-button {
+    text-align: center;
+    position: relative;
+}
+
 .button {
+    display: inline-block;
     border-radius: 6px;
     border: none;
     color: white;
     background-color: black;
+    transform: translate(0%, 1000%);
     top: 50%;
-    position: absolute;
     min-height: 40px;
     min-width: 140px
 }
