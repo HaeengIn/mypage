@@ -1,6 +1,12 @@
 .display-button {
     text-align: center;
     position: relative;
+    flex-wrap: wrap;
+    display: flex;
+    
+    flex-direction: row;
+    align-items: cneter;
+    justify-contents: center;
 }
 
 .button {
@@ -10,7 +16,6 @@
     color: white;
     background-color: black;
     transform: translate(0%, 1000%);
-    top: 50%;
     min-height: 40px;
     min-width: 140px
 }
