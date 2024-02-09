@@ -29,3 +29,8 @@
     background-color: #737373;
     transition: 0.3s;
 }
+
+.img {
+    max-height: 200px;
+    max-width: 200px;
+}
