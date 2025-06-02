@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         },
         {
-            threshold: 0.1
+            threshold: 0.2
         }
     );
     fadeEls.forEach(el => observer.observe(el));
