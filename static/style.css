@@ -46,21 +46,38 @@ h2 {
 }
 
 /* 이미지 너비 설정 */
+img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
 @media (max-width: 767px) {
     img {
         width: 100%;
-        padding-bottom: 20px;
     }
 }
 
 @media (min-width: 768px) {
     img {
         width: 70%;
-        padding-bottom: 20px;
     }
 }
 
 /* 버튼 가운데 정렬 */
 .buttons {
     text-align: center;
+}
+
+/* 페이지 페이드 인 */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
 }
