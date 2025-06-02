@@ -56,6 +56,9 @@ img {
 @media (max-width: 767px) {
     img {
         width: 100%;
+        height: auto;
+        padding-left: 0px;
+        padding-bottom: 20px;
     }
 }
 
