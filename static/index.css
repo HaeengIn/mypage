@@ -3,24 +3,20 @@
   font-family: 'Godo';
   font-style: normal;
   font-weight: 400;
-  src: url('//fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('//fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff');
+  src: url('https://fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('https://fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Godo';
   font-style: normal;
   font-weight: 700;
-  src: url('//fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
-}
-
-.godo * {
- font-family: 'Godo', sans-serif;
+  src: url('https://fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('https://fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
 }
 
 /* 배경 그라데이션 적용 */
 body {
     background-image: linear-gradient(to right, #b0f2ff, #61a5ff);
-    font-family: 'Godo', sans-serif;
+    font-family: 'Godo';
     font-weight: 400;
     font-style: normal;
     text-decoration-line: none;
