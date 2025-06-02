@@ -27,6 +27,7 @@ body {
 /* 하이퍼링크 밑줄 삭제 */
 a {
     text-decoration-line: none;
+    color: #00f;
 }
 
 /* 제목 가운데 정렬 */
@@ -41,23 +42,21 @@ h1 {
 
 /* 텍스트 공백 설정 */
 h2 {
-    padding: 20px;
+    padding-left: 20px;
 }
 
 /* 이미지 너비 설정 */
-img {
-    width: 100%;
-}
-
 @media (max-width: 767px) {
     img {
         width: 100%;
+        padding-bottom: 20px;
     }
 }
 
 @media (min-width: 768px) {
     img {
         width: 70%;
+        padding-bottom: 20px;
     }
 }
 
