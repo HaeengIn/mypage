@@ -18,11 +18,11 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     );
     fadeEls.forEach(el => observer.observe(el));
-    const scrollBottomLink = document.getElementById('scroll-bottom-link');
+    const scrollBottomLink = document.getElementById('scroll_bottom');
     if (scrollBottomLink) {
         scrollBottomLink.addEventListener('click', function(e) {
             e.preventDefault();
-            const bottom = document.getElementById('page-bottom');
+            const bottom = document.getElementById('page_bottom');
             if (bottom) {
                 bottom.scrollIntoView({ behavior: 'smooth' });
             } else {
