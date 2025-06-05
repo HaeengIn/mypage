@@ -89,6 +89,6 @@ details {
     padding-left: 10px;
 }
 
-img.details_img {
+body img.details_img {
     padding-left: 0px !important;
 }
