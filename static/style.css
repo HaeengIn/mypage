@@ -84,3 +84,11 @@ img {
     opacity: 1;
     transform: translateY(0);
 }
+
+details {
+    padding-left: 10px;
+}
+
+img.details_img {
+    padding-left: 0px !important;
+}
