@@ -19,8 +19,6 @@ body {
     font-weight: 400;
     font-style: normal;
     text-decoration-line: none;
-    font-weight: 400;
-    font-style: normal;
     word-break: keep-all;
     cursor: auto;
     color: #fff;
@@ -109,4 +107,8 @@ button:active {
 .fade-up.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+small {
+    font-size: 15px;
 }
