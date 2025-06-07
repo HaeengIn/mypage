@@ -112,3 +112,10 @@ button:active {
 small {
     font-size: 15px;
 }
+
+p {
+    text-align: center;
+    font-size: 10px;
+    margin: 20px;
+    padding: 20px;
+}
