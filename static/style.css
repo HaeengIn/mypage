@@ -13,9 +13,8 @@
   src: url('https://fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('https://fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
 }
 
-/* 배경 그라데이션 적용 */
 body {
-    background-image: linear-gradient(to right, #b0f2ff, #61a5ff);
+    background-image: linear-gradient(to right, #9ed, #61a5ff);
     font-family: 'Godo';
     font-weight: 400;
     font-style: normal;
@@ -23,12 +22,16 @@ body {
     font-weight: 400;
     font-style: normal;
     word-break: keep-all;
+    cursor: auto;
+    color: #fff;
+    text-shadow: -0.5px 0px black, 0px 0.5px black, 0.5px 0px black, 0px -0.5px black;
 }
 
 /* 하이퍼링크 밑줄 삭제 */
 a {
     text-decoration-line: none;
     color: #00f;
+    text-shadow: none !important;
 }
 
 /* 제목 가운데 정렬 */
@@ -68,6 +71,32 @@ h2 {
 /* 버튼 가운데 정렬 */
 .buttons {
     text-align: center;
+}
+
+button {
+    border: solid;
+    border-radius: 13px;
+    border-color: #9ed;
+    border-width: 2px;
+    box-shadow: 0 0 13px #9ed;
+    background-color: #9ed;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Godo' !important;
+    text-shadow: 0 0 1px #000;
+    min-width: 200px;
+    height: 13vw;
+    transition: all .4s ease;
+    margin: 10px;
+    padding: 10px;
+}
+
+button:hover {
+    transition: all .4s ease;
+}
+
+button:active {
+    transform: scale(0.95);
 }
 
 /* 페이지 페이드 인 */
