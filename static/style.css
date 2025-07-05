@@ -6,13 +6,6 @@
   src: url('https://fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('https://fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff');
 }
 
-@font-face {
-  font-family: 'Godo';
-  font-style: normal;
-  font-weight: 700;
-  src: url('https://fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('https://fastly.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
-}
-
 body {
     background-image: linear-gradient(to right, #9ed, #61a5ff);
     font-family: 'Godo';
