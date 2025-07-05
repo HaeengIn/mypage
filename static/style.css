@@ -76,9 +76,8 @@ button {
     font-family: 'Godo' !important;
     text-shadow: 0 0 1px #000;
     min-width: 200px;
-    height: 13vw;
+    height: 48px; /* 또는 원하는 높이로 수정 */
     transition: all .4s ease;
-    margin: 10px;
     padding: 10px;
 }
 
