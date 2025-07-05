@@ -15,7 +15,7 @@ body {
     word-break: keep-all;
     cursor: auto;
     color: #fff;
-    text-shadow: -0.5px 0px black, 0px 0.5px black, 0.5px 0px black, 0px -0.5px black;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
 }
 
 /* 하이퍼링크 밑줄 삭제 */
