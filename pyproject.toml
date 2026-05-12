@@ -1,0 +1,14 @@
+[project]
+name = "mypage"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "fastapi>=0.136.1",
+    "python-multipart>=0.0.28",
+    "supabase>=2.30.0",
+    "supabase-auth>=2.30.0",
+    "uvicorn>=0.46.0",
+]
