@@ -5,6 +5,7 @@ from templates_config import templates
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+
 @app.middleware("http")
 async def add_link_header(request, call_next):
     response = await call_next(request)
@@ -15,6 +16,7 @@ async def add_link_header(request, call_next):
             '<https://haeengin.com/docs>; rel="service-doc"'
         )
     return response
+
 
 @app.get("/")
 async def index(request: Request):
