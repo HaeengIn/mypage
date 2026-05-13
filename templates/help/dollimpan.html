@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link CSS file -->
     <link rel="stylesheet" href="/static/css/style.css?v={{ static_version('static/css/style.css') }}">
+    <link rel="stylesheet" href="/static/css/help/dollimpan.css?v={{ static_version('static/css/help/dollimpan.css') }}">
     <title>돌림판 - 도움말</title>
 </head>
 <body>
@@ -19,5 +20,13 @@
         - 입력값은 한국어와 영어만 지원하며, 최대 4자까지 입력할 수 있습니다.<br>
     </p>
     <script src="/static/js/footer.js?v={{ static_version('static/js/footer.js') }}"></script>
+    <script>
+        document.body.addEventListener("pointermove", (event) => {
+            const x = `${(event.clientX / window.innerWidth) * 100}%`;
+            const y = `${(event.clientY / window.innerHeight) * 100}%`;
+            document.documentElement.style.setProperty("--mouse-x", x);
+            document.documentElement.style.setProperty("--mouse-y", y);
+        });
+    </script>
 </body>
 </html>

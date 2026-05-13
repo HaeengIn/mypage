@@ -1,0 +1,14 @@
+body {
+    display: grid;
+    place-items: center;
+    gap: 1.1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+body > div {
+    display: flex;
+    justify-content: center;
+}

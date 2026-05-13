@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link CSS file -->
+    <link rel="stylesheet" href="/static/css/style.css?v={{ static_version('static/css/style.css') }}">
+    <link rel="stylesheet" href="/static/css/license/index.css?v={{ static_version('static/css/license/index.css') }}">
     <!-- Set favicon -->
     <link rel="icon" type="image/png" href="/static/favicon/favicon-96x96.png?v=20260512" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/static/favicon/favicon.svg?v=20260512">
@@ -17,11 +19,19 @@
 <body>
     <h1>허가 증명 스크린샷</h1>
     <div>
-        <button onclick="location.href='/license/wppengine'">월 페이퍼 엔진</button>
-        <button onclick="location.href='/license/7bg'">작곡가 허가 증명</button>
+        <button class="interactive-glow" onclick="location.href='/license/wppengine'">월 페이퍼 엔진</button>
+        <button class="interactive-glow" onclick="location.href='/license/7bg'">작곡가 허가 증명</button>
     </div>
     <div>
-        <button onclick="location.href='/'">홈으로</button>
+        <button class="interactive-glow" onclick="location.href='/'">홈으로</button>
     </div>
+    <script>
+        document.body.addEventListener("pointermove", (event) => {
+            const x = `${(event.clientX / window.innerWidth) * 100}%`;
+            const y = `${(event.clientY / window.innerHeight) * 100}%`;
+            document.documentElement.style.setProperty("--mouse-x", x);
+            document.documentElement.style.setProperty("--mouse-y", y);
+        });
+    </script>
 </body>
 </html>

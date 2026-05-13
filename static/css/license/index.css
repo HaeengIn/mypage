@@ -1,0 +1,10 @@
+body {
+    display: grid;
+    gap: 1rem;
+}
+
+body > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
