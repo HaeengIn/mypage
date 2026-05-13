@@ -60,9 +60,15 @@ OS/플랫폼: ${platform}
     document.body.appendChild(footer);
 
     // 마우스 포인터 인터랙션 배경 좌표 반영
+    let glowHideTimer;
     window.addEventListener("pointermove", (event) => {
         document.body.style.setProperty("--mx", `${event.clientX}px`);
         document.body.style.setProperty("--my", `${event.clientY}px`);
+        document.body.classList.add("mouse-glow-visible");
+        clearTimeout(glowHideTimer);
+        glowHideTimer = setTimeout(() => {
+            document.body.classList.remove("mouse-glow-visible");
+        }, 3000);
     });
 
 });

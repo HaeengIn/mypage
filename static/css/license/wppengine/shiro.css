@@ -1,5 +1,6 @@
 body {
     place-content: start center;
+    justify-items: center;
 }
 
 body > div {
@@ -11,4 +12,6 @@ body > div {
     box-shadow: var(--shadow);
     display: grid;
     gap: 0.6rem;
+    justify-items: center;
+    text-align: center;
 }
