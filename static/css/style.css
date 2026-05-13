@@ -42,7 +42,14 @@ body::before {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background: radial-gradient(160px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.12), transparent 72%);
+    background: radial-gradient(
+        240px circle at var(--mx, 50%) var(--my, 50%),
+        rgba(255, 255, 255, 0.14) 0%,
+        rgba(255, 255, 255, 0.08) 38%,
+        rgba(255, 255, 255, 0.03) 64%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    filter: blur(10px);
     transition: background-position 0.12s linear;
     z-index: 0;
 }
