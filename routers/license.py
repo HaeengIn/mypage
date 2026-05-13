@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Request, HTTPException
 from templates_config import templates
+from typing import Any, cast
 
 license_router = APIRouter(prefix="/license", redirect_slashes=True)
 
@@ -27,7 +28,9 @@ async def wppengine_pages(request: Request):
 
         status_map = {0: "Disallowed", 1: "Allowed", 2: "Partially Allowed"}
         for row in rows:
-            row["verify_status_text"] = status_map.get(row["verify_status"], "Unknown")  # type: ignore
+            row_dict = cast(dict[str, Any], row)
+            verify_status = int(row_dict["verify_status"])
+            row_dict["verify_status_text"] = status_map.get(verify_status, "Unknown")
 
         return templates.TemplateResponse(
             request=request,
