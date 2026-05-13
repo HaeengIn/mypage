@@ -1,0 +1,12 @@
+body {
+    display: grid;
+    gap: 16px;
+}
+
+body > div {
+    overflow: hidden;
+}
+
+h3 {
+    color: #9be4b2;
+}

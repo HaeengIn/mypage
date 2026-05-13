@@ -1,0 +1,6 @@
+p {
+    background: linear-gradient(160deg, rgba(25, 36, 55, 0.72), rgba(19, 29, 44, 0.95));
+    border: 1px solid rgba(132, 158, 206, 0.25);
+    border-radius: 14px;
+    padding: 16px;
+}
