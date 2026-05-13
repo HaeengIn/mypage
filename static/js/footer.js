@@ -68,7 +68,7 @@ OS/플랫폼: ${platform}
         clearTimeout(glowHideTimer);
         glowHideTimer = setTimeout(() => {
             document.body.classList.remove("mouse-glow-visible");
-        }, 200);
+        }, 3000);
     });
 
 });
