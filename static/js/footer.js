@@ -58,4 +58,11 @@ OS/플랫폼: ${platform}
     footer.appendChild(report);
     footer.appendChild(contact)
     document.body.appendChild(footer);
+
+    // 마우스 포인터 인터랙션 배경 좌표 반영
+    window.addEventListener("pointermove", (event) => {
+        document.body.style.setProperty("--mx", `${event.clientX}px`);
+        document.body.style.setProperty("--my", `${event.clientY}px`);
+    });
+
 });
