@@ -58,4 +58,13 @@ OS/플랫폼: ${platform}
     footer.appendChild(report);
     footer.appendChild(contact)
     document.body.appendChild(footer);
+
+    // 마우스 위치 기반 글로우 효과
+    document.addEventListener("pointermove", function (event) {
+        const x = `${Math.round((event.clientX / window.innerWidth) * 100)}%`;
+        const y = `${Math.round((event.clientY / window.innerHeight) * 100)}%`;
+        document.body.style.setProperty("--mx", x);
+        document.body.style.setProperty("--my", y);
+    });
+
 });

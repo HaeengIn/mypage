@@ -1,0 +1,21 @@
+body {
+    gap: 0.9rem;
+}
+
+body > div {
+    width: min(960px, 100%);
+    padding: 1rem 1rem 1.1rem;
+    background: rgba(24, 34, 63, 0.72);
+    border: 1px solid rgba(160, 180, 255, 0.2);
+    border-radius: 14px;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+}
+
+h3,
+h4 {
+    margin-top: 0.25rem;
+}
+
+img {
+    margin-top: 0.75rem;
+}
