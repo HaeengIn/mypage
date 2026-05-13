@@ -22,7 +22,7 @@ async def wppengine_pages(request: Request):
     from supabase_client import supabase
 
     try:
-        response = supabase.table("shiro_verification").select("*").execute()
+        response = supabase.table("shiro_verification").select("*").order("name", desc=False).execute()
         rows = response.data
 
         status_map = {0: "Disallowed", 1: "Allowed", 2: "Partially Allowed"}
