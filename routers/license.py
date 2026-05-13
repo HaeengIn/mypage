@@ -17,7 +17,6 @@ async def wppengine(request: Request):
     )
 
 
-@license_router.get("/")
 @license_router.get("/wppengine/shiro")
 async def wppengine_pages(request: Request):
     from supabase_client import supabase
