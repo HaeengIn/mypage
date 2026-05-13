@@ -1,6 +1,6 @@
 :root {
     color-scheme: dark;
-    --bg-primary: #0b0b0b;
+    --bg-primary: #2e2e2e;
     --bg-secondary: #1a1a1a;
     --surface: rgba(36, 36, 36, 0.72);
     --surface-border: rgba(255, 255, 255, 0.14);
@@ -38,11 +38,11 @@ body {
 }
 
 body::before {
-    content: none;
+    content: "";
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background: none;
+    background: radial-gradient(160px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.12), transparent 72%);
     transition: background-position 0.12s linear;
     z-index: 0;
 }
