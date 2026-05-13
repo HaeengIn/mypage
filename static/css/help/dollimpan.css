@@ -1,0 +1,13 @@
+body {
+    place-content: start center;
+}
+
+p {
+    padding: 1.1rem 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius);
+    max-width: 760px;
+    color: #d8e5ff;
+    box-shadow: var(--shadow);
+}

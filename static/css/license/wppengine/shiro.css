@@ -1,0 +1,14 @@
+body {
+    place-content: start center;
+}
+
+body > div {
+    width: min(100%, 1040px);
+    padding: 1rem;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    box-shadow: var(--shadow);
+    display: grid;
+    gap: 0.6rem;
+}
