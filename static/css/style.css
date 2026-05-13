@@ -33,19 +33,16 @@ body {
     line-height: 1.55;
     letter-spacing: 0.01em;
     color: var(--text-primary);
-    background:
-        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.08), transparent 30%),
-        radial-gradient(circle at 80% 10%, rgba(200, 200, 200, 0.08), transparent 32%),
-        linear-gradient(160deg, var(--bg-primary), #121212 42%, var(--bg-secondary));
+    background: var(--bg-primary);
     overflow-x: hidden;
 }
 
 body::before {
-    content: "";
+    content: none;
     position: fixed;
     inset: 0;
     pointer-events: none;
-    background: radial-gradient(180px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.12), transparent 72%);
+    background: none;
     transition: background-position 0.12s linear;
     z-index: 0;
 }
