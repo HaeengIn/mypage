@@ -44,11 +44,14 @@ OS/플랫폼: ${platform}
     const copyright = document.createElement("p");
     copyright.innerHTML = "Copyright 2026 &copy; HaeengIn. All Rights Reserved.";
     const report = document.createElement("a");
+    report.classList.add("footer");
     report.href = `mailto:${email}?subject=${subject}&body=${body}`;
     report.target = "_blank";
     report.rel = "noopener noreferrer";
     report.textContent = "오류 신고";
+
     const contact = document.createElement("a");
+    contact.classList.add("footer");
     contact.href = `mailto:${email}`;
     contact.target = "_blank";
     contact.rel = "noopener noreferrer";
