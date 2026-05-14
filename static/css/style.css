@@ -1,58 +1,66 @@
+@import url(./fonts.css?v=20260514);
+
 :root {
-    color-scheme: dark;
-    --bg-primary: #1c1c1f;
-    --bg-secondary: #1a1a1a;
-    --surface: rgba(36, 36, 36, 0.72);
-    --surface-border: rgba(255, 255, 255, 0.14);
-    --text-primary: #f2f2f2;
-    --text-secondary: #b3b3b3;
-    --accent: #d9d9d9;
-    --accent-strong: #ffffff;
-    --success: #c9c9c9;
-    --shadow: 0 20px 45px rgba(0, 0, 0, 0.38);
-    --radius: 18px;
+  color-scheme: dark;
+  --bg-primary: #1c1c1f;
+  --bg-secondary: #1a1a1a;
+  --surface: rgba(36, 36, 36, 0.72);
+  --surface-border: rgba(255, 255, 255, 0.14);
+  --text-primary: #f2f2f2;
+  --text-secondary: #b3b3b3;
+  --accent: #d9d9d9;
+  --accent-strong: #ffffff;
+  --success: #c9c9c9;
+  --shadow: 0 20px 45px rgba(0, 0, 0, 0.38);
+  --radius: 18px;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    margin: 0;
-    min-height: 100%;
+  margin: 0;
+  min-height: 100%;
 }
 
 body {
-    position: relative;
-    display: grid;
-    gap: 1.25rem;
-    place-content: center;
-    padding: clamp(1.25rem, 4vw, 3rem);
-    line-height: 1.55;
-    color: var(--text-primary);
-    background: var(--bg-primary);
-    overflow-x: hidden;
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+  place-content: center;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  line-height: 1.55;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  overflow-x: hidden;
 }
 
 body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background: radial-gradient(160px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.12), transparent 72%);
-    opacity: 0;
-    transition: opacity 1s ease, background-position 0.12s linear;
-    z-index: 0;
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    160px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 255, 255, 0.12),
+    transparent 72%
+  );
+  opacity: 0;
+  transition:
+    opacity 1s ease,
+    background-position 0.12s linear;
+  z-index: 0;
 }
 
 body.mouse-glow-visible::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 body > * {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 h1,
@@ -60,46 +68,92 @@ h2,
 h3,
 h4,
 p {
-    margin: 0;
+  margin: 0;
 }
 
-h2 { color: #e5e5e5; }
-h3, h4 { color: var(--text-secondary); }
+h2 {
+  color: #e5e5e5;
+}
+
+h3,
+h4 {
+  color: var(--text-secondary);
+}
 
 a,
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button {
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    border-radius: 12px;
-    background: linear-gradient(140deg, rgba(255, 255, 255, 0.14), rgba(180, 180, 180, 0.12));
-    color: var(--text-primary);
-    padding: 0.7rem 1rem;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 8px 24px rgba(7, 13, 28, 0.5);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 12px;
+  background: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.14),
+    rgba(180, 180, 180, 0.12)
+  );
+  color: var(--text-primary);
+  padding: 0.7rem 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(7, 13, 28, 0.5);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
 }
 
 button:hover {
-    transform: translateY(-2px) scale(1.01);
-    border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.38);
+  transform: translateY(-2px) scale(1.01);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.38);
 }
 
 button:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 img {
-    width: min(100%, 980px);
-    height: auto;
-    border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: var(--shadow);
+  width: min(100%, 980px);
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow);
 }
 
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { transition: none !important; animation: none !important; }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+a.footer {
+  padding: 3px;
+}
+
+/* Font  Settings */
+
+h1 {
+  font-family: var(--pretendard-Black);
+}
+
+h2 {
+  font-family: var(--pretendard-ExtraBold);
+}
+
+h3 {
+  font-family: var(--pretendard-Bold);
+}
+
+h4,
+button {
+  font-family: var(--pretendard-Regular);
+}
+
+p,
+a.footer {
+  font-family: var(--pretendard-Thin);
 }
