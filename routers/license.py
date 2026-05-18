@@ -10,36 +10,41 @@ async def index(request: Request):
     return templates.TemplateResponse(request=request, name="license/index.html")
 
 
-@license_router.get("/wppengine")
-async def wppengine(request: Request):
+@license_router.get("/wallpaperengine")
+async def wallpaperengine(request: Request):
     return templates.TemplateResponse(
-        request=request, name="license/wppengine/index.html"
+        request=request, name="license/wallpaperengine/index.html"
     )
 
 
-@license_router.get("/wppengine/shiro")
+@license_router.get("/wallpaperengine/shiro")
 async def shiro(request: Request):
     from supabase_client import supabase
 
     try:
         response = (
-            supabase.table("shiro_verification")
+            supabase.table("wallpaperengine_verification")
             .select("*")
+            .eq("target", "shiro")
             .order("name", desc=False)
             .execute()
         )
         rows = response.data
 
-        status_map = {0: "Disallowed", 1: "Allowed", 2: "Partially Allowed"}
-        for row in rows:
-            row_dict = cast(dict[str, Any], row)
-            verify_status = int(row_dict["verify_status"])
-            row_dict["verify_status_text"] = status_map.get(verify_status, "Unknown")
-
         return templates.TemplateResponse(
             request=request,
             context={"verifications": rows},
-            name="license/wppengine/shiro.html",
+            name="license/wallpaperengine/base.html",
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@license_router.get("/wallpaperengine/hello2026")
+async def hello2026(request: Request):
+    screenshot_url = "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/verification_screenshot/wallpaperengine/hello2026/Hello(BPM)2026.avif"
+    return templates.TemplateResponse(
+        request=request,
+        context={"screenshot_url": screenshot_url},
+        name="license/wallpaperengine/hello2026.html",
+    )
