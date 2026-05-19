@@ -17,34 +17,29 @@ async def wallpaperengine(request: Request):
     )
 
 
-@license_router.get("/wallpaperengine/shiro")
-async def shiro(request: Request):
+@license_router.get("/wallpaperengine/{page}")
+async def shiro(request: Request, page: str):
     from supabase_client import supabase
 
-    try:
-        response = (
-            supabase.table("wallpaperengine_verification")
-            .select("*")
-            .eq("target", "shiro")
-            .order("name", desc=False)
-            .execute()
-        )
-        rows = response.data
+    pages = ["shiro", "hello2026"]
 
-        return templates.TemplateResponse(
-            request=request,
-            context={"verifications": rows},
-            name="license/wallpaperengine/base.html",
-        )
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    if page in pages:
+        try:
+            response = (
+                supabase.table("wallpaperengine_verification")
+                .select("*")
+                .eq("target", page)
+                .order("name", desc=False)
+                .execute()
+            )
+            rows = response.data
 
-
-@license_router.get("/wallpaperengine/hello2026")
-async def hello2026(request: Request):
-    screenshot_url = "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/verification_screenshot/wallpaperengine/hello2026/Hello(BPM)2026.avif"
-    return templates.TemplateResponse(
-        request=request,
-        context={"screenshot_url": screenshot_url},
-        name="license/wallpaperengine/hello2026.html",
-    )
+            return templates.TemplateResponse(
+                request=request,
+                context={"verifications": rows, "title": page},
+                name="license/wallpaperengine/base.html",
+            )
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=str(e))
+    else:
+        raise HTTPException(status_code=404, detail="Page not found")
