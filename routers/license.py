@@ -22,6 +22,7 @@ async def shiro(request: Request, page: str):
     from supabase_client import supabase
 
     pages = ["shiro", "hello2026"]
+    title_map = {"shiro": "SHIRO", "hello2026": "Hello (BPM) 2026"}
 
     if page in pages:
         try:
@@ -36,7 +37,7 @@ async def shiro(request: Request, page: str):
 
             return templates.TemplateResponse(
                 request=request,
-                context={"verifications": rows, "title": page},
+                context={"verifications": rows, "title": title_map[page]},
                 name="license/wallpaperengine/base.html",
             )
         except Exception as e:
