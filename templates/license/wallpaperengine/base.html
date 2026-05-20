@@ -21,8 +21,8 @@
     {% for item in verifications %}
     <div>
         <h2>{{ item.name }}</h2>
-        <h3>Status: {{ item.verify_status }}</h3>
-        <h4>Detail: {{ item.verify_details }}</h4>
+        <h4>Status: {{ item.verify_status }}</h4>
+        <p>Detail: {{ item.verify_details }}</p>
         {% if item.screenshot_path %}
             <img loading="lazy" src="{{ item.screenshot_path }}" alt="{{ item.name }}.avif">
         {% endif %}
