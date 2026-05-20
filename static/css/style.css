@@ -1,4 +1,39 @@
-@import url(./fonts.css?v=20260514);
+/* Import Fonts */
+
+@font-face {
+  font-family: 'NanumSquareNeo-Light';
+  src: url(/static/fonts/NanumSquareNeoTTF-Light.woff2) format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo-Regular';
+  src: url(/static/fonts/NanumSquareNeoTTF-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo-Bold';
+  src: url(/static/fonts/NanumSquareNeoTTF-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo-ExtraBold';
+  src: url(/static/fonts/NanumSquareNeoTTF-ExtraBold.woff2) format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo-Heavy';
+  src: url(/static/fonts/NanumSquareNeoTTF-Heavy.woff2) format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
 
 :root {
   color-scheme: dark;
@@ -13,6 +48,11 @@
   --success: #c9c9c9;
   --shadow: 0 20px 45px rgba(0, 0, 0, 0.38);
   --radius: 18px;
+  --font-Light: 'NanumSquareNeo-Light';
+  --font-Regular: 'NanumSquareNeo-Regular';
+  --font-Bold: 'NanumSquareNeo-Bold';
+  --font-ExtraBold: 'NanumSquareNeo-ExtraBold';
+  --font-Heavy: 'NanumSquareNeo-Heavy';
 }
 
 * {
@@ -137,23 +177,23 @@ a.footer {
 /* Font  Settings */
 
 h1 {
-  font-family: var(--pretendard-Black);
+  font-family: var(--font-Heavy);
 }
 
 h2 {
-  font-family: var(--pretendard-ExtraBold);
+  font-family: var(--font-ExtraBold);
 }
 
 h3 {
-  font-family: var(--pretendard-Bold);
+  font-family: var(--font-Bold);
 }
 
 h4,
 button {
-  font-family: var(--pretendard-Regular);
+  font-family: var(--font-Regular);
 }
 
 p,
 a.footer {
-  font-family: var(--pretendard-Thin);
+  font-family: var(--font-Light);
 }
