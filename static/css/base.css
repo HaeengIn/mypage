@@ -42,5 +42,47 @@
 }
 
 body {
-    font-family: var(--font-Regualr);
+    font-family: var(--font-Regular);
+    background: linear-gradient(to right, #303030, #494949);
+    color: white;
+    text-align: center;
+    word-break: keep-all;
+}
+
+h1 {
+    font-family: var(--font-Heavy);
+}
+
+h3 {
+    font-family: var(--font-ExtraBold);
+}
+
+p, a {
+    font-family: var(--font-Light);
+}
+
+a {
+    color: #77EEDD;
+    margin: 5px;
+}
+
+div.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-family: var(--font-Bold);
+    font-size: 15px;
+    background-color: #2e2e2e;
+    color: white;
+    width: 250px;
+    height: 50px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px;
 }

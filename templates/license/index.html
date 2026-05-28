@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link CSS file -->
     <link rel="stylesheet" href="/static/css/base.css?v={{ static_version('static/css/base.css') }}">
-    <link rel="stylesheet" href="/static/css/shared/button-layout.css?v={{ static_version('static/css/shared/button-layout.css') }}">
     <!-- Set favicon -->
     <link rel="icon" type="image/png" href="/static/favicon/favicon-96x96.png?v=20260512" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/static/favicon/favicon.svg?v=20260512">
@@ -18,7 +17,7 @@
 </head>
 <body>
     <h1>허가 증명 스크린샷</h1>
-    <div>
+    <div class="button-container">
         <button onclick="location.href='/license/wallpaperengine'">월 페이퍼 엔진</button>
         <button onclick="location.href='/license/7bg'">작곡가 허가 증명</button>
     </div>

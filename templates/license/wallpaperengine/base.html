@@ -6,7 +6,7 @@
     <meta name="description" content="Verification screenshots of {{ title }}">
     <!-- Link CSS file -->
     <link rel="stylesheet" href="/static/css/base.css?v={{ static_version('static/css/base.css') }}">
-    <link rel="stylesheet" href="/static/css/pages/license-wallpaperengine-detail.css?v={{ static_version('static/css/pages/license-wallpaperengine-detail.css') }}">
+    <link rel="stylesheet" href="/static/css/license.css?v={{ static_version('static/css/license.css') }}">
     <!-- Set favicon -->
     <link rel="icon" type="image/png" href="/static/favicon/favicon-96x96.png?v=20260512" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/static/favicon/favicon.svg?v=20260512">
@@ -20,9 +20,9 @@
 <body>
     {% for item in verifications %}
     <div>
-        <h2>{{ item.name }}</h2>
-        <h4>Status: {{ item.verify_status }}</h4>
-        <p>Detail: {{ item.verify_details }}</p>
+        <h1>{{ item.name }}</h1>
+        <h3>Status: {{ item.verify_status }}</h3>
+        <p class="license-detail">Detail: {{ item.verify_details }}</p>
         {% if item.screenshot_path %}
             <img loading="lazy" src="{{ item.screenshot_path }}" alt="{{ item.name }}.avif">
         {% endif %}
