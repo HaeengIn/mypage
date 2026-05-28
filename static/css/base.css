@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Light';
+    src: url(/static/fonts/NanumSquareNeoTTF-Light.woff2) format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Regular';
+    src: url(/static/fonts/NanumSquareNeoTTF-Regular.woff2) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Bold';
+    src: url(/static/fonts/NanumSquareNeoTTF-Bold.woff2) format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-ExtraBold';
+    src: url(/static/fonts/NanumSquareNeoTTF-ExtraBold.woff2) format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Heavy';
+    src: url(/static/fonts/NanumSquareNeoTTF-Heavy.woff2) format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+:root {
+    --font-Light: 'NanumSquareNeo-Light';
+    --font-Regular: 'NanumSquareNeo-Regular';
+    --font-Bold: 'NanumSquareNeo-Bold';
+    --font-ExtraBold: 'NanumSquareNeo-ExtraBold';
+    --font-Heavy: 'NanumSquareNeo-Heavy';
+}
+
+body {
+    font-family: var(--font-Regualr);
+}
