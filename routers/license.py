@@ -17,8 +17,13 @@ async def wallpaperengine(request: Request):
     )
 
 
+@license_router.get("/7bg")
+async def verified_artists(request: Request):
+    return templates.TemplateResponse(request=request, name="license/7bg/index.html")
+
+
 @license_router.get("/wallpaperengine/{page}")
-async def shiro(request: Request, page: str):
+async def wallpaperengine_page(request: Request, page: str):
     from supabase_client import supabase
 
     pages = ["shiro", "hello2026"]
@@ -44,3 +49,32 @@ async def shiro(request: Request, page: str):
             raise HTTPException(status_code=500, detail=str(e))
     else:
         raise HTTPException(status_code=404, detail="Page not found")
+
+
+# @license_router.get("/7bg/{page}")
+# async def verified_artist_page(request: Request):
+#     from supabase_client import supabase
+
+#     pages = ["kinoshita"]
+#     title_map = {"kinoshita": "キノシタ"}
+
+#     if page in pages:
+#         try:
+#             response = (
+#                 supabase.table("7bg_verification")
+#                 .select("*")
+#                 .eq("target", page)
+#                 .order("name", desc=False)
+#                 .execute()
+#             )
+#             rows = response.data
+
+#             return templates.TemplateResponse(
+#                 request=request,
+#                 context={"verifications": rows, "title": title_map[page]},
+#                 name="license/7bg/base.html",
+#             )
+#         except Exception as e:
+#             raise HTTPException(status_code=500, detail=str(e))
+#     else:
+#         raise HTTPException(status_code=404, detail="Page not found")
