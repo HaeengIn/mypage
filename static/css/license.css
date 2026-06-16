@@ -1,22 +1,22 @@
 p.license-detail {
-    font-family: var(--font-Bold);
+  font-family: var(--font-Bold);
 }
 
 img {
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 767px) {
-    img {
-        width: 95%;
-        height: auto;
-    }
+  img {
+    width: 95%;
+    height: auto;
+  }
 }
 
 @media (min-width: 768px) {
-    img {
-        width: 80%;
-        height: auto;
-    }
+  img {
+    width: 80%;
+    height: auto;
+  }
 }
