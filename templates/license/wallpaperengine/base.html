@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Verification screenshots of {{ title }}">
-    <!-- Link CSS file -->
-    <link rel="stylesheet" href="/static/css/base.css?v={{ static_version('static/css/base.css') }}">
+{% extends 'base.html' %}
+{% block css %}
     <link rel="stylesheet" href="/static/css/license.css?v={{ static_version('static/css/license.css') }}">
-    <!-- Set favicon -->
-    <link rel="icon" type="image/png" href="/static/favicon/favicon-96x96.png?v=20260512" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/static/favicon/favicon.svg?v=20260512">
-    <link rel="shortcut icon" href="/static/favicon/favicon.ico?v=20260512">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png?v=20260512">
-    <meta name="apple-mobile-web-app-title" content="HaeengIn's Website">
-    <link rel="manifest" href="/static/favicon/site.webmanifest?v=20260512">
-    <!-- Title of page -->
-    <title>Wallpaper Engine - {{ title }}</title>
-</head>
-<body>
+{% endblock css %}
+{% block body %}
     {% for item in verifications %}
     <div>
         <h1>{{ item.name }}</h1>
@@ -29,6 +14,4 @@
     </div>
     {% endfor %}
     <button onclick="location.href='/license/wallpaperengine'">뒤로가기</button>
-    <script defer src="/static/js/footer.js?v={{ static_version('static/js/footer.js') }}"></script>
-</body>
-</html>
+{% endblock body %}
