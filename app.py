@@ -21,7 +21,10 @@ async def add_link_header(request, call_next):
 
 @app.get("/")
 async def index(request: Request):
-    return templates.TemplateResponse(request=request, name="index.html")
+    title = "NaGNae - Ofiicial website of HaeengIn"
+    return templates.TemplateResponse(
+        request=request, context={"title": title}, name="index.html"
+    )
 
 
 app.include_router(license_router)

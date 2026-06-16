@@ -7,13 +7,19 @@ license_router = APIRouter(prefix="/license", redirect_slashes=True)
 
 @license_router.get("")
 async def index(request: Request):
-    return templates.TemplateResponse(request=request, name="license/index.html")
+    title = "허가 증명 스크린샷 - NaGNae"
+    return templates.TemplateResponse(
+        request=request, context={"title": title}, name="license/index.html"
+    )
 
 
 @license_router.get("/wallpaperengine")
 async def wallpaperengine(request: Request):
+    title = "허가 증명 스크린샷 [Wallpaper Engine] - NaGNae"
     return templates.TemplateResponse(
-        request=request, name="license/wallpaperengine/index.html"
+        request=request,
+        context={"title": title},
+        name="license/wallpaperengine/index.html",
     )
 
 
@@ -23,6 +29,7 @@ async def wallpaperengine_page(request: Request, page: str):
 
     pages = ["shiro", "hello2026"]
     title_map = {"shiro": "SHIRO", "hello2026": "Hello (BPM) 2026"}
+    title = f"Wallpaper Engine - {title_map[page]}"
 
     if page in pages:
         try:
@@ -37,7 +44,7 @@ async def wallpaperengine_page(request: Request, page: str):
 
             return templates.TemplateResponse(
                 request=request,
-                context={"verifications": rows, "title": title_map[page]},
+                context={"verifications": rows, "title": title},
                 name="license/wallpaperengine/base.html",
             )
         except Exception as e:
