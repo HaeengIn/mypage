@@ -1,6 +1,5 @@
 from fastapi import APIRouter, Request, HTTPException
 from templates_config import templates
-from typing import Any, cast
 
 license_router = APIRouter(prefix="/license", redirect_slashes=True)
 
