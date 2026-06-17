@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="/static/css/license.css?v={{ static_version('static/css/license.css') }}">
 {% endblock css %}
 {% block body %}
-    {% for item in verifications %}
+    {% for item in items %}
     <div>
         <h1>{{ item.name }}</h1>
         <h3>Status: {{ item.verify_status }}</h3>

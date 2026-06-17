@@ -39,11 +39,11 @@ async def wallpaperengine_page(request: Request, page: str):
                 .order("name", desc=False)
                 .execute()
             )
-            rows = response.data
+            data = response.data
 
             return templates.TemplateResponse(
                 request=request,
-                context={"verifications": rows, "title": title},
+                context={"items": data, "title": title},
                 name="license/wallpaperengine/base.html",
             )
         except Exception as e:
