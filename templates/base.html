@@ -1,8 +1,12 @@
+{% set site_name = "NaGNae - HaeengIn's Official Website'" %}
+{% set desc = "Official website of HaeengIn. Check verification screenshots of Wallpaper Engine Steam Workshop content: DJ Raisei - SHIRO, Camellia - Hello (BPM) 2026. / HaeengIn의 공식 웹사이트. 월 페이퍼 엔진에 업로드 된 DJ Raisei - SHIRO와 Camellia - Hello (BPM) 2026의 허가 증명 스크린샷을 확인하세요." %}
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ desc }}">
     <!-- Link CSS file -->
     <link rel="stylesheet" href="/static/css/base.css?v={{ static_version('static/css/base.css') }}">
     {% block css %}{% endblock css %}
@@ -11,8 +15,13 @@
     <link rel="icon" type="image/svg+xml" href="/static/favicon/favicon.svg?v=20260512">
     <link rel="shortcut icon" href="/static/favicon/favicon.ico?v=20260512">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png?v=20260512">
-    <meta name="apple-mobile-web-app-title" content="NaGNae - HaeengIn's official website'">
+    <meta name="apple-mobile-web-app-title" content="{{ site_name }}">
     <link rel="manifest" href="/static/favicon/site.webmanifest?v=20260512">
+    <!-- OpenGraph setting -->
+    <meta property="og:title" content="{{ site_name }}">
+    <meta property="og:description" content="{{ desc }}">
+    <meta property="og:image" content="https://tinyurl.com/z6hsupty">
+    <meta property="og:site_name" content="{{ site_name }}">
     <!-- Title of page -->
     <title>{{ title }}</title>
 </head>
