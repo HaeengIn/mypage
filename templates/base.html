@@ -35,7 +35,14 @@
     <title>{{ title }}</title>
 </head>
 <body>
-    {% block body %}{% endblock body %}
+    <nav class="nav">
+        <a href="/">홈</a>
+        <a href="/license">허가 증명</a>
+        <a href="/download-installer">Installer</a>
+    </nav>
+    <main>
+        {% block body %}{% endblock body %}
+    </main>
     <script defer src="/static/js/footer.js?v={{ static_version('static/js/footer.js') }}"></script>
 </body>
 </html>
