@@ -67,8 +67,9 @@ a {
 }
 
 a {
-  color: #77eedd;
+  color: gray;
   margin: 5px;
+  text-decoration: none;
 }
 
 div.button-container {
@@ -90,6 +91,11 @@ button {
   border-radius: 15px;
   cursor: pointer;
   margin: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 nav {
