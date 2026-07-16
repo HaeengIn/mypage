@@ -3,6 +3,7 @@ from fastapi.staticfiles import StaticFiles
 from templates_config import templates
 from routers.license import license_router
 from routers.download_installer import download_installer_router
+from routers.about import about_router
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -30,3 +31,4 @@ async def index(request: Request):
 
 app.include_router(license_router)
 app.include_router(download_installer_router)
+app.include_router(about_router)

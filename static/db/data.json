@@ -24,5 +24,22 @@
             "name": "ProtonVPN",
             "url": "https://download-installer.t3.tigrisfiles.io/ProtonVPN_v4.4.1_x64.exe"
         }
-    ]
+    ],
+    "about": {
+        "github": {
+            "img": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/about_assets/github_logo.avif",
+            "url": "https://github.com/HaeengIn",
+            "label": "GitHub"
+        },
+        "youtube": {
+            "img": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/about_assets/youtube_icon.avif",
+            "url": "https://youtube.com/@haeengin",
+            "label": "YouTube"
+        },
+        "tuf": {
+            "img": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/about_assets/tuf_logo.avif",
+            "url": "https://tuforums.com/profile/2182",
+            "label": "The Universal Forums"
+        }
+    }
 }
