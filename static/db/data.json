@@ -41,5 +41,34 @@
             "url": "https://tuforums.com/profile/2182",
             "label": "The Universal Forums"
         }
+    },
+    "adofai": {
+        "dreeamy-express": {
+            "download": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/adofai_assets/Surk%20-%20Dreamy%20Express.zip",
+            "label": "Surk - Dreamy Express",
+            "release-date": "2025-07-16",
+            "creator": {
+                "chart": "HaeengIn",
+                "vfx": "HaeengIn"
+            }
+        },
+        "kokushimusou": {
+            "download": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/adofai_assets/Laur%20-%20KOKUSHIMUSOU.zip",
+            "label": "Laur - KOKUSHIMUSOU",
+            "release-date": "2025-05-02",
+            "creator": {
+                "chart": "HaeengIn",
+                "vfx": "HaeengIn"
+            }
+        },
+        "sonic-blaster": {
+            "download": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/adofai_assets/HJFod%20-%20Sonic%20Blaster.zip",
+            "label": "F777 - Sonic Blaster (HJFod Remix)",
+            "release-date": "N/A",
+            "creator": {
+                "chart": "HaeengIn",
+                "vfx": "HaeengIn"
+            }
+        }
     }
 }
