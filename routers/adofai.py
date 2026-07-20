@@ -12,15 +12,15 @@ with open("static/db/data.json", "r") as f:
 
 @adofai_router.get("")
 async def index(request: Request):
-    title = ("ADOFAI - NaGNae",)
-    h1 = ("A Dance of Fire and Ice",)
+    title = "ADOFAI - NaGNae"
+    h1 = "A Dance of Fire and Ice"
     h3 = "HaeengIn의 불과 얼음의 춤 활동"
 
     context = {
         "title": title,
         "h1": h1,
         "h3": h3,
-        "repo-link": "https://github.com/HaeengIn/Adofai-Custom-Creates",
+        "repo_link": "https://github.com/HaeengIn/Adofai-Custom-Creates",
     }
 
     return templates.TemplateResponse(
@@ -37,5 +37,5 @@ async def custom(request: Request):
     context = {"title": title, "h1": h1, "h3": h3, "items": data}
 
     return templates.TemplateResponse(
-        request=request, context=context, name="adofai/custom/index.html"
+        request=request, context=context, name="adofai/custom.html"
     )
