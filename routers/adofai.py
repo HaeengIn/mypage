@@ -7,7 +7,7 @@ adofai_router = APIRouter(prefix="/adofai", redirect_slashes=True)
 
 with open("static/db/data.json", "r") as f:
     data = json.load(f)
-    data = data["adofai"].values()
+    data = list(data["adofai"].values())
 
 
 @adofai_router.get("")
