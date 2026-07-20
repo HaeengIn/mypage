@@ -30,6 +30,19 @@ async def index(request: Request):
     )
 
 
+@app.get("/help/dollimpan")
+async def dollimpan(request: Request):
+    title = "돌림판 - 도움말"
+    h1 = title
+
+    context = {
+        "title": title,
+        "h1": h1
+    }
+
+    return templates.TemplateResponse(request=request, context=context, name="help/dollimpan.html")
+
+
 app.include_router(license_router)
 app.include_router(download_installer_router)
 app.include_router(about_router)
