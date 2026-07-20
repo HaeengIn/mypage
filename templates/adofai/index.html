@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="button-container">
+        <button onclick="location.href='/adofai/custom'">커스텀 레벨 다운로드</button>
+        <a href="{{ repo_link }}" target="_blank" rel="noopener noreferrer">
+            <button>GitHub Repository</button>
+        </a>
+        <button onclick="location.href='/'">홈으로</button>
+    </div>
+{% endblock body %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% for item in items %}
+        <h2>{{ item.label }}</h2>
+        <p>Release Date: {{ item["release-date"] }}</p>
+        <a href="{{ item.download }}" target="_blank" rel="noopener noreferrer">
+            <div class="button-container">
+                <button>다운로드</button>
+            </div>
+        </a>
+        <details>
+            <summary>Creator</summary>
+            <p>Chart: {{ item.creator.chart }} / VFX: {{ item.creator.vfx }}</p>
+        </details>
+    {% endfor %}
+    <div class="button-container">
+        <button onclick="location.href='/adofai'">뒤로가기</button>
+    </div>
+{% endblock body %}
