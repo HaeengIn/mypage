@@ -57,6 +57,11 @@ h1 {
   font-family: var(--font-Heavy);
 }
 
+h2 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 h3 {
   font-family: var(--font-ExtraBold);
 }
@@ -66,9 +71,14 @@ a {
   font-family: var(--font-Light);
 }
 
+p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
 a {
   color: gray;
-  margin: 5px;
+  margin: 4px;
   text-decoration: none;
 }
 
@@ -90,7 +100,7 @@ button {
   border-color: white;
   border-radius: 15px;
   cursor: pointer;
-  margin: 10px;
+  margin: 8px;
 
   display: flex;
   align-items: center;
@@ -113,6 +123,7 @@ nav {
 }
 
 nav a {
+  height: auto;
   display: inline-block;
   background: #2e2e2e;
   color: white !important;
@@ -129,4 +140,9 @@ nav a:hover {
 
 main {
   padding-top: var(--navbar-padding);
+}
+
+summary {
+  margin-bottom: 8px;
+  cursor: pointer;
 }
