@@ -1,171 +1,172 @@
 @font-face {
-  font-family: "NanumSquareNeo-Light";
-  src: url(/static/fonts/NanumSquareNeoTTF-Light.woff2) format("woff2");
-  font-weight: 300;
-  font-display: swap;
+    font-family: "NanumSquareNeo-Light";
+    src: url(/static/fonts/NanumSquareNeoTTF-Light.woff2) format("woff2");
+    font-weight: 300;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "NanumSquareNeo-Regular";
-  src: url(/static/fonts/NanumSquareNeoTTF-Regular.woff2) format("woff2");
-  font-weight: 400;
-  font-display: swap;
+    font-family: "NanumSquareNeo-Regular";
+    src: url(/static/fonts/NanumSquareNeoTTF-Regular.woff2) format("woff2");
+    font-weight: 400;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "NanumSquareNeo-Bold";
-  src: url(/static/fonts/NanumSquareNeoTTF-Bold.woff2) format("woff2");
-  font-weight: 600;
-  font-display: swap;
+    font-family: "NanumSquareNeo-Bold";
+    src: url(/static/fonts/NanumSquareNeoTTF-Bold.woff2) format("woff2");
+    font-weight: 600;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "NanumSquareNeo-ExtraBold";
-  src: url(/static/fonts/NanumSquareNeoTTF-ExtraBold.woff2) format("woff2");
-  font-weight: 700;
-  font-display: swap;
+    font-family: "NanumSquareNeo-ExtraBold";
+    src: url(/static/fonts/NanumSquareNeoTTF-ExtraBold.woff2) format("woff2");
+    font-weight: 700;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "NanumSquareNeo-Heavy";
-  src: url(/static/fonts/NanumSquareNeoTTF-Heavy.woff2) format("woff2");
-  font-weight: 800;
-  font-display: swap;
+    font-family: "NanumSquareNeo-Heavy";
+    src: url(/static/fonts/NanumSquareNeoTTF-Heavy.woff2) format("woff2");
+    font-weight: 800;
+    font-display: swap;
 }
 
 :root {
-  --font-Light: "NanumSquareNeo-Light";
-  --font-Regular: "NanumSquareNeo-Regular";
-  --font-Bold: "NanumSquareNeo-Bold";
-  --font-ExtraBold: "NanumSquareNeo-ExtraBold";
-  --font-Heavy: "NanumSquareNeo-Heavy";
-  --navbar-padding: 60px;
-  --navbar-font: "NanumSquareNeo-Light";
-  --cric-out: cubic-bezier(0,1,1,1);
-  --transition-duration: 0.5s;
+    --font-Light: "NanumSquareNeo-Light";
+    --font-Regular: "NanumSquareNeo-Regular";
+    --font-Bold: "NanumSquareNeo-Bold";
+    --font-ExtraBold: "NanumSquareNeo-ExtraBold";
+    --font-Heavy: "NanumSquareNeo-Heavy";
+    --navbar-padding: 60px;
+    --navbar-font: "NanumSquareNeo-Light";
+    --cric-out: cubic-bezier(0, 1, 1, 1);
+    --transition-duration: 0.5s;
 }
 
 body {
-  font-family: var(--font-Regular);
-  background: linear-gradient(to right, #303030, #494949);
-  color: white;
-  text-align: center;
-  word-break: keep-all;
+    font-family: var(--font-Regular);
+    background: linear-gradient(to right, #303030, #494949);
+    color: white;
+    text-align: center;
+    word-break: keep-all;
 }
 
 h1 {
-  font-family: var(--font-Heavy);
+    font-family: var(--font-Heavy);
 }
 
 h2 {
-  margin-top: 8px;
-  margin-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 h3 {
-  font-family: var(--font-ExtraBold);
+    font-family: var(--font-ExtraBold);
 }
 
 p,
 a {
-  font-family: var(--font-Light);
+    font-family: var(--font-Light);
 }
 
 p {
-  margin-top: 4px;
-  margin-bottom: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 a {
-  color: gray;
-  margin: 4px;
-  text-decoration: none;
+    color: gray;
+    margin: 4px;
+    text-decoration: none;
 }
 
 div.button-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
-  font-family: var(--font-Bold);
-  font-size: 15px;
-  background-color: #2e2e2e;
-  color: white;
-  width: 250px;
-  height: 50px;
-  border-style: solid;
-  border-color: white;
-  border-radius: 15px;
-  cursor: pointer;
-  margin: 8px;
+    font-family: var(--font-Bold);
+    font-size: 15px;
+    background-color: #2e2e2e;
+    color: white;
+    width: 250px;
+    height: 50px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 8px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 nav {
-  position: fixed;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--navbar-padding);
-  background: linear-gradient(to right, #303030, #494949);
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--navbar-padding);
+    background: linear-gradient(to right, #303030, #494949);
 }
 
 nav a {
-  display: inline-block;
-  background: #2e2e2e;
-  color: white !important;
-  padding: 10px 16px;
-  border-radius: 15px;
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: box-shadow var(--transition-duration) var(--cric-out),
-              transform var(--transition-duration) var(--cric-out);
+    display: inline-block;
+    background: #2e2e2e;
+    color: white !important;
+    padding: 10px 16px;
+    border-radius: 15px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition:
+        box-shadow var(--transition-duration) var(--cric-out),
+        transform var(--transition-duration) var(--cric-out);
 }
 
 nav a:hover {
-  box-shadow: 0 0 10px #000;
-  transform: scale(1.1);
+    box-shadow: 0 0 10px #000;
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
-  nav {
-    justify-content: flex-start;
-    overflow-x: auto;
-    overflow-y: hidden;
-    gap: 10px;
-  }
+    nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 10px;
+    }
 
-  nav::-webkit-scrollbar {
-    display: none;
-  }
+    nav::-webkit-scrollbar {
+        display: none;
+    }
 
-  nav a:first-child {
-    margin-left: 10px;
-  }
+    nav a:first-child {
+        margin-left: 10px;
+    }
 
-  nav a:last-child {
-    margin-right: 10px;
-  }
+    nav a:last-child {
+        margin-right: 10px;
+    }
 }
 
 main {
-  padding-top: var(--navbar-padding);
+    padding-top: var(--navbar-padding);
 }
 
 summary {
-  margin-bottom: 8px;
-  cursor: pointer;
+    margin-bottom: 8px;
+    cursor: pointer;
 }
