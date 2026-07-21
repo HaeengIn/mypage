@@ -112,8 +112,8 @@ nav {
   position: fixed;
   z-index: 1000;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   top: 0;
   left: 0;
@@ -123,19 +123,42 @@ nav {
 }
 
 nav a {
-  height: auto;
   display: inline-block;
   background: #2e2e2e;
   color: white !important;
   padding: 10px 16px;
-  text-decoration: none;
   border-radius: 15px;
-  transition: box-shadow var(--transition-duration) var(--cric-out), transform var(--transition-duration) var(--cric-out);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: box-shadow var(--transition-duration) var(--cric-out),
+              transform var(--transition-duration) var(--cric-out);
 }
 
 nav a:hover {
-  box-shadow: 0px 0px 10px #000;
-  transform: scale(120%);
+  box-shadow: 0 0 10px #000;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav a:first-child {
+    margin-left: 10px;
+  }
+
+  nav a:last-child {
+    margin-right: 10px;
+  }
 }
 
 main {
