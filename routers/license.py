@@ -7,17 +7,26 @@ license_router = APIRouter(prefix="/license", redirect_slashes=True)
 @license_router.get("")
 async def index(request: Request):
     title = "허가 증명 스크린샷 - NaGNae"
+    h1 = "허가 증명 스크린샷"
+
+    context = {"title": title, "h1": h1}
+
     return templates.TemplateResponse(
-        request=request, context={"title": title}, name="license/index.html"
+        request=request, context=context, name="license/index.html"
     )
 
 
 @license_router.get("/wallpaperengine")
 async def wallpaperengine(request: Request):
     title = "허가 증명 스크린샷 [Wallpaper Engine] - NaGNae"
+    h1 = "월 페이퍼 엔진"
+    h3 = "Wallpaper Engine"
+
+    context = {"title": title, "h1": h1, "h3": h3}
+
     return templates.TemplateResponse(
         request=request,
-        context={"title": title},
+        context=context,
         name="license/wallpaperengine/index.html",
     )
 

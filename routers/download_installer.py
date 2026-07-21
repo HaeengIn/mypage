@@ -13,9 +13,15 @@ with open("static/db/data.json", "r") as data:
 @download_installer_router.get("")
 async def index(request: Request):
     installer_data = json_data["download_installer"]
+
     title = "Windows installer download"
+    h1 = "Windows Installer Download"
+    h3 = "for HaeengIn"
+
+    context = {"title": title, "h1": h1, "h3": h3, "items": installer_data}
+
     return templates.TemplateResponse(
         request=request,
-        context={"title": title, "items": installer_data},
+        context=context,
         name="download_installer/index.html",
     )

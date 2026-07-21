@@ -25,8 +25,15 @@ async def add_link_header(request, call_next):
 @app.get("/")
 async def index(request: Request):
     title = "NaGNae - Official website of HaeengIn"
+    h1 = "HaeengIn의 공식 웹 사이트"
+
+    context = {
+        "title": title,
+        "h1": h1,
+    }
+
     return templates.TemplateResponse(
-        request=request, context={"title": title}, name="index.html"
+        request=request, context=context, name="index.html"
     )
 
 
@@ -35,12 +42,11 @@ async def dollimpan(request: Request):
     title = "돌림판 - 도움말"
     h1 = title
 
-    context = {
-        "title": title,
-        "h1": h1
-    }
+    context = {"title": title, "h1": h1}
 
-    return templates.TemplateResponse(request=request, context=context, name="help/dollimpan.html")
+    return templates.TemplateResponse(
+        request=request, context=context, name="help/dollimpan.html"
+    )
 
 
 app.include_router(license_router)
