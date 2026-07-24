@@ -1,6 +1,8 @@
-from fastapi import APIRouter, Request
-from templates_config import templates
 import json
+
+from fastapi import APIRouter, Request
+
+from templates_config import templates
 
 download_installer_router = APIRouter(
     prefix="/download-installer", redirect_slashes=True

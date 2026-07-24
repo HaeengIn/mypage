@@ -2,6 +2,7 @@ import json
 
 from fastapi import APIRouter, Request, HTTPException
 from fastapi.responses import RedirectResponse
+
 from templates_config import templates
 
 adofai_router = APIRouter(prefix="/adofai", redirect_slashes=True)

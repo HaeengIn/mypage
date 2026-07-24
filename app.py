@@ -1,6 +1,8 @@
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
+
 from templates_config import templates
+
 from routers.license import license_router
 from routers.download_installer import download_installer_router
 from routers.about import about_router
