@@ -15,8 +15,7 @@ async def index(request: Request):
 
         title = "About - NaGNae"
         h1 = "Introducing HaeengIn"
-        h3 = """ADOFAI Amatuer Charter
-        FastAPI & Python Developer"""
+        h3 = "ADOFAI Amatuer Charter<br>FastAPI & Python Developer"
 
         context = {
             "title": title,

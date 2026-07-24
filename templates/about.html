@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
+{% block h3 %}
+    {{ h3 | safe }}
+{% endblock h3 %}
 {% block body %}
     <h2>Links</h2>
     <div class="button-container">
