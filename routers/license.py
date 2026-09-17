@@ -2,7 +2,7 @@ from fastapi import APIRouter, Request, HTTPException
 
 from templates_config import templates
 
-license_router = APIRouter(prefix="/license", redirect_slashes=True)
+license_router = APIRouter(prefix="/license")
 
 
 @license_router.get("")

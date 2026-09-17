@@ -4,7 +4,7 @@ from fastapi import APIRouter, Request
 
 from templates_config import templates
 
-about_router = APIRouter(prefix="/about", redirect_slashes=True)
+about_router = APIRouter(prefix="/about")
 
 
 @about_router.get("")

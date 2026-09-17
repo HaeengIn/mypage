@@ -23,6 +23,15 @@ async def add_link_header(request, call_next):
     return response
 
 
+@app.middleware("http")
+async def strip_trailing_slash(request: Request, call_next):
+    path = request.scope["path"]
+    if path != "/" and path.endswith("/"):
+        request.scope["path"] = path.rstrip("/")
+    response = await call_next(request)
+    return response
+
+
 @app.get("/")
 async def index(request: Request):
     title = "NaGNae - Official website of HaeengIn"

@@ -5,7 +5,7 @@ from fastapi.responses import RedirectResponse
 
 from templates_config import templates
 
-adofai_router = APIRouter(prefix="/adofai", redirect_slashes=True)
+adofai_router = APIRouter(prefix="/adofai")
 
 with open("static/db/data.json", "r") as f:
     data = json.load(f)
@@ -42,15 +42,16 @@ async def custom(request: Request):
         request=request, context=context, name="adofai/custom.html"
     )
 
+
 @adofai_router.get("/custom/download/{downloads}")
 async def custom_download(request: Request, downloads: str):
     AVAILABLE_DOWNLOADS = ["dreamy-express", "kokushimusou", "sonic-blaster"]
     if downloads in AVAILABLE_DOWNLOADS:
         with open("static/db/data.json", "r", encoding="utf-8") as f:
             data = json.load(f)["adofai"]
-        
+
         item = data.get(downloads)
-        
+
         return RedirectResponse(item["download"])
     else:
-        raise HTTPException(status_code=404, detail="Custom level not found.")        
+        raise HTTPException(status_code=404, detail="Custom level not found.")
