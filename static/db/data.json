@@ -1,30 +1,4 @@
 {
-    "download_installer": [
-        {
-            "name": "Python 3.12.1",
-            "url": "https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe"
-        },
-        {
-            "name": "Git 2.54.0",
-            "url": "https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.exe"
-        },
-        {
-            "name": "Discord",
-            "url": "https://discord.com/api/download?platform=win"
-        },
-        {
-            "name": "VSCode",
-            "url": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user"
-        },
-        {
-            "name": "Spotify",
-            "url": "https://download.scdn.co/SpotifySetup.exe"
-        },
-        {
-            "name": "ProtonVPN",
-            "url": "https://download-installer.t3.tigrisfiles.io/ProtonVPN_v4.4.1_x64.exe"
-        }
-    ],
     "about": {
         "github": {
             "img": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/about_assets/github_logo.avif",
