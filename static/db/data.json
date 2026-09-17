@@ -1,51 +1,51 @@
 {
-    "about": {
-        "github": {
-            "img": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/about_assets/github_logo.avif",
-            "url": "https://github.com/HaeengIn",
-            "label": "GitHub"
-        },
-        "youtube": {
-            "img": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/about_assets/youtube_icon.avif",
-            "url": "https://youtube.com/@haeengin",
-            "label": "YouTube"
-        },
-        "tuf": {
-            "img": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/about_assets/tuf_logo.avif",
-            "url": "https://tuforums.com/profile/2182",
-            "label": "The Universal Forums"
-        }
+  "about": {
+    "github": {
+      "img": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/about_assets/github_logo.avif",
+      "url": "https://github.com/HaeengIn",
+      "label": "GitHub"
     },
-    "adofai": {
-        "dreamy-express": {
-            "url": "/adofai/custom/download/dreamy-express",
-            "download": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/adofai_assets/Surk%20-%20Dreamy%20Express.zip",
-            "label": "Surk - Dreamy Express",
-            "release-date": "2025-07-16",
-            "creator": {
-                "chart": "HaeengIn",
-                "vfx": "HaeengIn"
-            }
-        },
-        "kokushimusou": {
-            "url": "/adofai/custom/download/kokushimusou",
-            "download": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/adofai_assets/Laur%20-%20KOKUSHIMUSOU.zip",
-            "label": "Laur - KOKUSHIMUSOU",
-            "release-date": "2025-05-02",
-            "creator": {
-                "chart": "HaeengIn",
-                "vfx": "HaeengIn"
-            }
-        },
-        "sonic-blaster": {
-            "url": "/adofai/custom/download/sonic-blaster",
-            "download": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/adofai_assets/HJFod%20-%20Sonic%20Blaster.zip",
-            "label": "F777 - Sonic Blaster (HJFod Remix)",
-            "release-date": "N/A",
-            "creator": {
-                "chart": "HaeengIn",
-                "vfx": "HaeengIn"
-            }
-        }
+    "youtube": {
+      "img": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/about_assets/youtube_icon.avif",
+      "url": "https://youtube.com/@haeengin",
+      "label": "YouTube"
+    },
+    "tuf": {
+      "img": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/about_assets/tuf_logo.avif",
+      "url": "https://tuforums.com/profile/2182",
+      "label": "The Universal Forums"
     }
+  },
+  "adofai": {
+    "dreamy-express": {
+      "url": "/adofai/custom/download/dreamy-express",
+      "download": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/adofai_assets/Surk%20-%20Dreamy%20Express.zip",
+      "label": "Surk - Dreamy Express",
+      "release-date": "2025-07-16",
+      "creator": {
+        "chart": "HaeengIn",
+        "vfx": "HaeengIn"
+      }
+    },
+    "kokushimusou": {
+      "url": "/adofai/custom/download/kokushimusou",
+      "download": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/adofai_assets/Laur%20-%20KOKUSHIMUSOU.zip",
+      "label": "Laur - KOKUSHIMUSOU",
+      "release-date": "2025-05-02",
+      "creator": {
+        "chart": "HaeengIn",
+        "vfx": "HaeengIn"
+      }
+    },
+    "sonic-blaster": {
+      "url": "/adofai/custom/download/sonic-blaster",
+      "download": "https://oydyuozovkyalcqshmdr.supabase.co/storage/v1/object/public/mypage/adofai_assets/HJFod%20-%20Sonic%20Blaster.zip",
+      "label": "F777 - Sonic Blaster (HJFod Remix)",
+      "release-date": "N/A",
+      "creator": {
+        "chart": "HaeengIn",
+        "vfx": "HaeengIn"
+      }
+    }
+  }
 }
