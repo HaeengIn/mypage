@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 from auto_template import setup_templates
 
@@ -66,6 +67,16 @@ async def dollimpan(request: Request):
         context=context,
         name="help/dollimpan.html",
     )
+
+
+@app.get("/robots.txt")
+async def robots(request: Request):
+    return FileResponse("./robots.txt")
+
+
+@app.get("/sitemap.xml")
+async def sitemap(request: Request):
+    return FileResponse("./sitemap.xml")
 
 
 app.include_router(license_router)
