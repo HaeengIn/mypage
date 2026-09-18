@@ -39,10 +39,12 @@
   --font-Bold: "NanumSquareNeo-Bold";
   --font-ExtraBold: "NanumSquareNeo-ExtraBold";
   --font-Heavy: "NanumSquareNeo-Heavy";
+
   --navbar-padding: 60px;
   --navbar-font: "NanumSquareNeo-Light";
-  --cric-out: cubic-bezier(0, 1, 1, 1);
+
   --transition-duration: 0.5s;
+  --cric-out: cubic-bezier(0, 1, 1, 1);
 }
 
 body {
@@ -55,14 +57,17 @@ body {
 
 h1 {
   font-family: var(--font-Heavy);
+  font-size: 200%;
 }
 
 h2 {
-  margin: 8px 0;
+  font-family: var(--font-ExtraBold);
+  font-size: 160%;
 }
 
 h3 {
   font-family: var(--font-ExtraBold);
+  font-size: 120%;
 }
 
 footer p,
@@ -100,7 +105,7 @@ footer a {
   height: 56px;
 
   background-color: #2e2e2e;
-  
+
   transition:
     border-color var(--transition-duration) var(--cric-out),
     background-color var(--transition-duration) var(--cric-out);
@@ -128,7 +133,7 @@ nav {
 nav a {
   display: inline-block;
   background: #2e2e2e;
-  color: white !important;
+  color: white;
   padding: 10px 16px;
   border-radius: 15px;
   text-decoration: none;
@@ -167,10 +172,16 @@ nav a:hover {
 
 main {
   padding-top: var(--navbar-padding);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-summary {
-  margin-top: 16px;
-  margin-bottom: 8px;
-  cursor: pointer;
+hr {
+  margin: 10px;
+}
+
+details p {
+  margin: 10px 0 0 0;
 }
