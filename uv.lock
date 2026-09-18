@@ -39,6 +39,18 @@ wheels = [
 ]
 
 [[package]]
+name = "auto-template"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "fastapi" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/85/a4/24721c45563c2c9e3d57df368838303c942c84724392b27dc82ce5039597/auto_template-1.0.0.tar.gz", hash = "sha256:08b09b0508b482f30a08f9bcc3dc2bc5e74f0978ad5a125846ac2de187ecd7ac", size = 2939, upload-time = "2026-09-17T07:52:37.523Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/09/ba/52e1a771b046b668534383e2bad7a0ecaa6fa814b0c1f7922fc4aec94832/auto_template-1.0.0-py3-none-any.whl", hash = "sha256:4df0f4b56f12da0994394be281d3bbb2b8878c145c544daccd27f96ea46461ae", size = 3309, upload-time = "2026-09-17T07:52:35.865Z" },
+]
+
+[[package]]
 name = "certifi"
 version = "2026.7.22"
 source = { registry = "https://pypi.org/simple" }
@@ -716,6 +728,7 @@ name = "mypage"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "auto-template" },
     { name = "dotenv" },
     { name = "fastapi", extra = ["standard"] },
     { name = "jinja2" },
@@ -727,6 +740,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "auto-template", specifier = ">=1.0.0" },
     { name = "dotenv", specifier = ">=0.9.9" },
     { name = "fastapi", extras = ["standard"], specifier = ">=0.136.1" },
     { name = "jinja2", specifier = ">=3.1.6" },
