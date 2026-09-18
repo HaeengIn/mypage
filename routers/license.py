@@ -1,8 +1,10 @@
 from fastapi import APIRouter, Request, HTTPException
 
-from templates_config import templates
+from auto_template import setup_templates
 
 license_router = APIRouter(prefix="/license")
+
+templates = setup_templates(directory="templates")
 
 
 @license_router.get("")

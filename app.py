@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 
-from templates_config import templates
+from auto_template import setup_templates
 
 from routers.license import license_router
 from routers.about import about_router
@@ -9,6 +9,8 @@ from routers.adofai import adofai_router
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
+templates = setup_templates(directory="templates")
 
 
 @app.middleware("http")

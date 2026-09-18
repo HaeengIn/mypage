@@ -3,9 +3,11 @@ import json
 from fastapi import APIRouter, Request, HTTPException
 from fastapi.responses import RedirectResponse
 
-from templates_config import templates
+from auto_template import setup_templates
 
 adofai_router = APIRouter(prefix="/adofai")
+
+templates = setup_templates(directory="templates")
 
 with open("static/db/data.json", "r") as f:
     data = json.load(f)
