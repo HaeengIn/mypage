@@ -3,17 +3,15 @@
     {% for item in items %}
         <h2>{{ item.label }}</h2>
         <p>Release Date: {{ item["release-date"] }}</p>
-        <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">
-            <div class="button-container">
-                <button>Download</button>
-            </div>
-        </a>
+        <div class="button-container">
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">Download</a>
+        </div>
         <details>
             <summary>Creator</summary>
             <p>Chart: {{ item.creator.chart }} / VFX: {{ item.creator.vfx }}</p>
         </details>
     {% endfor %}
     <div class="button-container">
-        <button onclick="location.href='/adofai'">뒤로가기</button>
+        <a href="/adofai">뒤로가기</a>
     </div>
 {% endblock body %}

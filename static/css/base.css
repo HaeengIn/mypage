@@ -58,54 +58,57 @@ h1 {
 }
 
 h2 {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin: 8px 0;
 }
 
 h3 {
   font-family: var(--font-ExtraBold);
 }
 
-p,
-a {
+footer p,
+footer a {
   font-family: var(--font-Light);
-}
-
-p {
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-a {
-  color: gray;
   margin: 4px;
+}
+
+footer a {
+  color: gray;
   text-decoration: none;
 }
 
-div.button-container {
+.button-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
-button {
-  font-family: var(--font-Bold);
-  font-size: 15px;
-  background-color: #2e2e2e;
-  color: white;
-  width: 250px;
-  height: 50px;
-  border-style: solid;
-  border-color: white;
-  border-radius: 15px;
-  cursor: pointer;
-  margin: 8px;
-
+.button-container a {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 8px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 16px;
+  width: 280px;
+  height: 56px;
+
+  background-color: #2e2e2e;
+  
+  transition:
+    border-color var(--transition-duration) var(--cric-out),
+    background-color var(--transition-duration) var(--cric-out);
+}
+
+.button-container a:hover {
+  border-color: #f5f5f5;
+  background-color: #494949;
 }
 
 nav {
@@ -167,6 +170,7 @@ main {
 }
 
 summary {
+  margin-top: 16px;
   margin-bottom: 8px;
   cursor: pointer;
 }
