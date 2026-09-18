@@ -27,5 +27,5 @@ async def index(request: Request):
         }
 
         return templates.TemplateResponse(
-            request=request, context=context, name="about.html"
+            request=request, context=context, name="about.html",
         )

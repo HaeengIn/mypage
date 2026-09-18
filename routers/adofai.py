@@ -28,7 +28,9 @@ async def index(request: Request):
     }
 
     return templates.TemplateResponse(
-        request=request, context=context, name="adofai/index.html"
+        request=request,
+        context=context,
+        name="adofai/index.html",
     )
 
 
@@ -38,16 +40,27 @@ async def custom(request: Request):
     h1 = "커스텀 레벨 다운로드"
     h3 = "아래의 모든 레벨들의 저작권은 저(HaeengIn)과 공동작업자에게 있습니다."
 
-    context = {"title": title, "h1": h1, "h3": h3, "items": data}
+    context = {
+        "title": title,
+        "h1": h1,
+        "h3": h3,
+        "items": data,
+    }
 
     return templates.TemplateResponse(
-        request=request, context=context, name="adofai/custom.html"
+        request=request,
+        context=context,
+        name="adofai/custom.html",
     )
 
 
 @adofai_router.get("/custom/download/{downloads}")
 async def custom_download(request: Request, downloads: str):
-    AVAILABLE_DOWNLOADS = ["dreamy-express", "kokushimusou", "sonic-blaster"]
+    AVAILABLE_DOWNLOADS = [
+        "dreamy-express",
+        "kokushimusou",
+        "sonic-blaster",
+    ]
     if downloads in AVAILABLE_DOWNLOADS:
         with open("static/db/data.json", "r", encoding="utf-8") as f:
             data = json.load(f)["adofai"]
@@ -56,4 +69,7 @@ async def custom_download(request: Request, downloads: str):
 
         return RedirectResponse(item["download"])
     else:
-        raise HTTPException(status_code=404, detail="Custom level not found.")
+        raise HTTPException(
+            status_code=404,
+            detail="Custom level not found.",
+        )

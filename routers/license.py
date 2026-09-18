@@ -15,7 +15,9 @@ async def index(request: Request):
     context = {"title": title, "h1": h1}
 
     return templates.TemplateResponse(
-        request=request, context=context, name="license/index.html"
+        request=request,
+        context=context,
+        name="license/index.html",
     )
 
 
@@ -38,8 +40,14 @@ async def wallpaperengine(request: Request):
 async def wallpaperengine_page(request: Request, page: str):
     from supabase_client import supabase
 
-    pages = ["shiro", "hello2026"]
-    title_map = {"shiro": "SHIRO", "hello2026": "Hello (BPM) 2026"}
+    pages = [
+        "shiro",
+        "hello2026",
+    ]
+    title_map = {
+        "shiro": "SHIRO",
+        "hello2026": "Hello (BPM) 2026",
+    }
     title = f"Wallpaper Engine - {title_map[page]}"
 
     if page in pages:
@@ -59,6 +67,12 @@ async def wallpaperengine_page(request: Request, page: str):
                 name="license/wallpaperengine/base.html",
             )
         except Exception as e:
-            raise HTTPException(status_code=500, detail=str(e))
+            raise HTTPException(
+                status_code=500,
+                detail=str(e),
+            )
     else:
-        raise HTTPException(status_code=404, detail="Page not found")
+        raise HTTPException(
+            status_code=404,
+            detail="Page not found",
+        )

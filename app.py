@@ -45,7 +45,9 @@ async def index(request: Request):
     }
 
     return templates.TemplateResponse(
-        request=request, context=context, name="index.html"
+        request=request,
+        context=context,
+        name="index.html",
     )
 
 
@@ -54,10 +56,15 @@ async def dollimpan(request: Request):
     title = "돌림판 - 도움말"
     h1 = title
 
-    context = {"title": title, "h1": h1}
+    context = {
+        "title": title,
+        "h1": h1,
+    }
 
     return templates.TemplateResponse(
-        request=request, context=context, name="help/dollimpan.html"
+        request=request,
+        context=context,
+        name="help/dollimpan.html",
     )
 
 
