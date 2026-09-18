@@ -4,7 +4,7 @@
 {% endblock css %}
 {% block body %}
     {% for item in items %}
-    <div>
+    <div class="view">
         <h1>{{ item.name }}</h1>
         <h3>Status: {{ item.verify_status }}</h3>
         <p class="license-detail">Detail: {{ item.verify_details }}</p>
