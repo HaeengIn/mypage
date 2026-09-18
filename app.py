@@ -38,11 +38,13 @@ async def strip_trailing_slash(request: Request, call_next):
 @app.get("/")
 async def index(request: Request):
     title = "NaGNae - Official website of HaeengIn"
-    h1 = "HaeengIn의 공식 웹 사이트"
+    h1 = "NaGNae"
+    h3 = "Official website of HaeengIn"
 
     context = {
         "title": title,
         "h1": h1,
+        "h3": h3
     }
 
     return templates.TemplateResponse(
