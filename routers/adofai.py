@@ -18,12 +18,10 @@ with open("static/db/data.json", "r") as f:
 async def index(request: Request):
     title = "ADOFAI - NaGNae"
     h1 = "A Dance of Fire and Ice"
-    h3 = "HaeengIn의 불과 얼음의 춤 활동"
 
     context = {
         "title": title,
         "h1": h1,
-        "h3": h3,
         "repo_link": "https://github.com/HaeengIn/Adofai-Custom-Creates",
     }
 
