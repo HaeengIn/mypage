@@ -1,3 +1,5 @@
+import json
+
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
@@ -5,7 +7,6 @@ from fastapi.responses import FileResponse
 from auto_template import setup_templates
 
 from routers.license import license_router
-from routers.about import about_router
 from routers.adofai import adofai_router
 
 app = FastAPI()
@@ -41,17 +42,40 @@ async def index(request: Request):
     h1 = "NaGNae"
     h3 = "Official website of HaeengIn"
 
-    context = {
-        "title": title,
-        "h1": h1,
-        "h3": h3
-    }
+    context = {"title": title, "h1": h1, "h3": h3}
 
     return templates.TemplateResponse(
         request=request,
         context=context,
         name="index.html",
     )
+
+
+@app.get("/about")
+async def about(request: Request):
+    with open("static/db/data.json", "r") as f:
+        data = json.load(f)
+        data = data["about"].values()
+
+        title = "About - NaGNae"
+        h1 = "Introducing HaeengIn"
+        h3 = "ADOFAI Amatuer Charter<br>FastAPI & Python Developer"
+
+        css_file = "about"
+
+        context = {
+            "title": title,
+            "h1": h1,
+            "h3": h3,
+            "items": data,
+            "css_file": css_file,
+        }
+
+        return templates.TemplateResponse(
+            request=request,
+            context=context,
+            name="about.html",
+        )
 
 
 @app.get("/help/dollimpan")
@@ -82,5 +106,4 @@ async def sitemap(request: Request):
 
 
 app.include_router(license_router)
-app.include_router(about_router)
 app.include_router(adofai_router)
