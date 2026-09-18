@@ -10,7 +10,11 @@
     <meta name="description" content="{{ desc }}">
     
     <!-- Link CSS file -->
+    <link rel="stylesheet" href="/static/css/reset.css?v={{ static_version('static/css/reset.css') }}">
     <link rel="stylesheet" href="/static/css/base.css?v={{ static_version('static/css/base.css') }}">
+    {% if css_file != "" and css_file != null %}
+        <link rel="stylesheet" href="/static/css/{{ css_file }}.css?v={{ static_version('static/css/' ~ css_file ~ '.css') }}">
+    {% endif %}
     {% block css %}{% endblock css %}
     
     <!-- Favicon setting -->
@@ -50,16 +54,20 @@
         <a href="/about">About</a>
     </nav>
     <main>
+        {% if h1 != "" and h1 != null %}
         <h1>
             {% block h1 %}
                 {{ h1 }}
             {% endblock h1 %}
         </h1>
+        {% endif %}
+        {% if h3 != "" and h3 != null %}
         <h3>
             {% block h3 %}
                 {{ h3 }}
             {% endblock h3 %}
         </h3>
+        {% endif %}
         {% block body %}{% endblock body %}
     </main>
     <script defer src="/static/js/footer.js?v={{ static_version('static/js/footer.js') }}"></script>
