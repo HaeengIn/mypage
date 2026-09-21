@@ -17,12 +17,15 @@ with open("static/db/data.json", "r") as f:
 @adofai_router.get("")
 async def index(request: Request):
     title = "ADOFAI - NaGNae"
-    h1 = "A Dance of Fire and Ice"
+    h1 = "A Dance of <span class=\"fire\">Fire</span> and <span class=\"ice\">Ice</span>"
+
+    css_file = "adofai/index"
 
     context = {
         "title": title,
         "h1": h1,
         "repo_link": "https://github.com/HaeengIn/Adofai-Custom-Creates",
+        "css_file": css_file,
     }
 
     return templates.TemplateResponse(
